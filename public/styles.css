@@ -58,6 +58,19 @@ button.ghost {
   border: 1px solid var(--line);
 }
 
+button.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.link-btn {
+  background: none;
+  padding: 0 4px;
+  color: var(--bad);
+  font-size: 12px;
+  text-decoration: underline;
+}
+
 button.danger {
   background: var(--bad);
 }
@@ -339,6 +352,233 @@ main {
   }
 }
 
+/* ---------- 复核台扩展 ---------- */
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.section-head h2 {
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+
+.cards.compact {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.table th {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: none;
+}
+
+.table a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.detail span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.detail b {
+  font-size: 14px;
+}
+
+.ok-text { color: var(--ok); }
+.warn-text { color: var(--warn); }
+.bad-text, b.bad { color: var(--bad); }
+.muted { color: var(--muted); font-size: 13px; }
+.rule-note { line-height: 1.7; margin-top: 0; }
+
+/* 弹层 */
+.modal-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(32, 32, 29, .45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 16px;
+  z-index: 20;
+  overflow-y: auto;
+}
+
+.modal {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 24px 60px rgba(20, 16, 8, .28);
+  width: min(720px, 100%);
+  padding: 20px;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.modal-head h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.modal-form .form-grid {
+  margin-bottom: 4px;
+}
+
+.form-warn {
+  background: rgba(163, 92, 0, .1);
+  border: 1px solid rgba(163, 92, 0, .25);
+  color: var(--warn);
+  border-radius: 6px;
+  padding: 9px 11px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.intake-preview {
+  background: #f3efe6;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.pair-box {
+  border-radius: 8px;
+  padding: 11px 13px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.8;
+  border: 1px solid var(--line);
+}
+
+.pair-box.ok {
+  background: rgba(38, 115, 77, .09);
+  border-color: rgba(38, 115, 77, .3);
+}
+
+.pair-box.bad {
+  background: rgba(161, 61, 61, .08);
+  border-color: rgba(161, 61, 61, .3);
+}
+
+.detail-box {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.detail-box div {
+  background: #f7f3eb;
+  border-radius: 6px;
+  padding: 9px 11px;
+  display: grid;
+  gap: 4px;
+}
+
+.detail-box span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.timeline-title {
+  margin: 18px 0 10px;
+  font-size: 15px;
+}
+
+.timeline {
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-item {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ok);
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fff;
+  display: grid;
+  gap: 5px;
+}
+
+.timeline-item.is-bad {
+  border-left-color: var(--bad);
+  background: rgba(161, 61, 61, .04);
+}
+
+.timeline-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.shot-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 2px;
+}
+
+.shot-chip {
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: rgba(38, 115, 77, .1);
+  color: var(--ok);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.shot-chip.bad {
+  background: rgba(161, 61, 61, .1);
+  color: var(--bad);
+}
+
+.growth-card.is-bad {
+  opacity: .78;
+}
+
+.toast.bad {
+  background: var(--bad);
+}
+
 @media (max-width: 620px) {
   header {
     position: static;
@@ -352,7 +592,8 @@ main {
   .stats,
   .form-grid,
   .detail,
-  .toolbar {
+  .toolbar,
+  .detail-box {
     grid-template-columns: 1fr;
   }
 

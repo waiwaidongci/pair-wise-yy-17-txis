@@ -1,42 +1,565 @@
 {
-  "sites": [
+  "points": [
     {
-      "id": "site-seed-1",
+      "id": "pt-1",
+      "code": "D-07",
       "cave": "北麓三号洞",
       "zone": "滴水帘区",
-      "pointCode": "D-07",
-      "route": "西线巡测",
-      "sensitivity": "高",
-      "protectedStatus": "重点保护",
-      "baselineTemp": 16.2,
-      "baselineHumidity": 92,
-      "baselineCo2": 680,
-      "note": "游客步道上方，滴水频率稳定",
-      "createdAt": "2026-06-14T08:00:00.000Z",
-      "updatedAt": "2026-06-14T08:00:00.000Z",
+      "note": "游客步道上方，断面纹理清晰，每月固定机位拍摄。",
+      "baselineScaleMm": 100,
+      "baselineScalePixels": 2000,
+      "baselinePx": 1000,
+      "baselineMmPerPx": 0.05,
+      "baselineShotId": "st-1",
+      "baselineAt": "2026-05-15",
+      "baselineBy": "沈宁",
+      "createdAt": "2026-05-15T08:00:00.000Z",
+      "updatedAt": "2026-05-15T08:00:00.000Z",
       "history": [
-        { "at": "2026-06-14T08:00:00.000Z", "action": "创建", "note": "样点建档" }
+        {
+          "at": "2026-05-15T08:00:00.000Z",
+          "action": "建档并设定基准",
+          "note": "基准断面位置 50.000mm，换算 0.05mm/px"
+        }
+      ]
+    },
+    {
+      "id": "pt-2",
+      "code": "Y-03",
+      "cave": "北麓三号洞",
+      "zone": "玉笋廊",
+      "note": "细高石笋，早期出现轻微回缩，持续观察。",
+      "baselineScaleMm": 100,
+      "baselineScalePixels": 2000,
+      "baselinePx": 1200,
+      "baselineMmPerPx": 0.05,
+      "baselineShotId": "st-4",
+      "baselineAt": "2026-06-10",
+      "baselineBy": "江屿",
+      "createdAt": "2026-06-10T08:00:00.000Z",
+      "updatedAt": "2026-06-10T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-10T08:00:00.000Z",
+          "action": "建档并设定基准",
+          "note": "基准断面位置 60.000mm，换算 0.05mm/px"
+        }
       ]
     }
   ],
-  "surveys": [
+  "rods": [
     {
-      "id": "survey-seed-1",
-      "siteId": "site-seed-1",
-      "surveyor": "沈宁",
-      "date": "2026-06-18",
-      "temperature": 17.4,
-      "humidity": 88,
-      "co2": 920,
-      "dripRate": 12,
-      "disturbance": "栏杆外侧有触碰痕迹",
-      "photoUrl": "",
-      "status": "异常待复查",
-      "reviewNote": "",
-      "createdAt": "2026-06-18T10:00:00.000Z",
-      "updatedAt": "2026-06-18T10:00:00.000Z",
+      "id": "rd-1",
+      "code": "RB-201",
+      "lengthMm": 100,
+      "status": "在库",
+      "currentReviewId": null,
+      "note": "主标尺，刻度面完好",
+      "createdAt": "2026-05-01T03:00:00.000Z",
+      "updatedAt": "2026-08-01T09:00:00.000Z",
       "history": [
-        { "at": "2026-06-18T10:00:00.000Z", "action": "创建", "note": "CO2升高并有干扰痕迹" }
+        {
+          "at": "2026-08-01T09:00:00.000Z",
+          "action": "标尺归库",
+          "note": "复核 rv-1 关闭"
+        }
+      ]
+    },
+    {
+      "id": "rd-2",
+      "code": "RB-204",
+      "lengthMm": 100,
+      "status": "使用中",
+      "currentReviewId": "rv-muemi4ui-679f5",
+      "note": "",
+      "createdAt": "2026-05-01T03:00:00.000Z",
+      "updatedAt": "2026-09-23T21:36:44.298Z",
+      "history": [
+        {
+          "at": "2026-09-23T21:36:44.298Z",
+          "action": "标尺启用（锁定）",
+          "note": "复核 rv-muemi4ui-679f5（样点 T-99）"
+        },
+        {
+          "at": "2026-09-23T21:36:05.390Z",
+          "action": "标尺归库",
+          "note": "复核 rv-3 关闭"
+        },
+        {
+          "at": "2026-09-01T02:00:00.000Z",
+          "action": "标尺启用",
+          "note": "复核 rv-3（样点 D-07）"
+        }
+      ]
+    },
+    {
+      "id": "rd-3",
+      "code": "RB-209",
+      "lengthMm": 50,
+      "status": "使用中",
+      "currentReviewId": "rv-2",
+      "note": "短标尺，用于狭窄通道",
+      "createdAt": "2026-06-01T03:00:00.000Z",
+      "updatedAt": "2026-09-02T02:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-02T02:00:00.000Z",
+          "action": "标尺启用",
+          "note": "复核 rv-2（样点 Y-03）"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rv-1",
+      "pointId": "pt-1",
+      "rodId": "rd-1",
+      "purpose": "5–7 月月度增长复核",
+      "status": "已关闭",
+      "openedAt": "2026-05-04T02:00:00.000Z",
+      "openedBy": "沈宁",
+      "closedAt": "2026-08-01T09:00:00.000Z",
+      "closedBy": "黎澈",
+      "closeNote": "两条增长均由第二位测量员确认，标尺归库。",
+      "createdAt": "2026-05-04T02:00:00.000Z",
+      "updatedAt": "2026-08-01T09:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-08-01T09:00:00.000Z",
+          "action": "关闭复核并归还标尺 RB-201",
+          "note": "待办全部清零"
+        },
+        {
+          "at": "2026-05-04T02:00:00.000Z",
+          "action": "开启复核并启用标尺 RB-201",
+          "note": "5–7 月月度增长复核"
+        }
+      ]
+    },
+    {
+      "id": "rv-4",
+      "pointId": "pt-2",
+      "rodId": "rd-3",
+      "purpose": "6–8 月月度增长复核",
+      "status": "已关闭",
+      "openedAt": "2026-06-05T02:00:00.000Z",
+      "openedBy": "江屿",
+      "closedAt": "2026-08-03T09:00:00.000Z",
+      "closedBy": "沈宁",
+      "closeNote": "回缩连续同向，第二位测量员确认。",
+      "createdAt": "2026-06-05T02:00:00.000Z",
+      "updatedAt": "2026-08-03T09:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-08-03T09:00:00.000Z",
+          "action": "关闭复核并归还标尺 RB-209",
+          "note": "回缩连续同向，第二位测量员确认"
+        },
+        {
+          "at": "2026-06-05T02:00:00.000Z",
+          "action": "开启复核并启用标尺 RB-209",
+          "note": "6–8 月月度增长复核"
+        }
+      ]
+    },
+    {
+      "id": "rv-3",
+      "pointId": "pt-1",
+      "rodId": "rd-2",
+      "purpose": "9 月月度增长复核",
+      "status": "已关闭",
+      "openedAt": "2026-09-01T02:00:00.000Z",
+      "openedBy": "沈宁",
+      "closedAt": "2026-09-23T21:36:05.390Z",
+      "closedBy": "黎澈",
+      "closeNote": "",
+      "createdAt": "2026-09-01T02:00:00.000Z",
+      "updatedAt": "2026-09-23T21:36:05.390Z",
+      "history": [
+        {
+          "at": "2026-09-23T21:36:05.390Z",
+          "action": "关闭复核并归还标尺",
+          "note": "待办全部清零"
+        },
+        {
+          "at": "2026-09-10T06:00:00.000Z",
+          "action": "登记采用照片",
+          "note": "st-7，产生待确认增长"
+        },
+        {
+          "at": "2026-09-01T02:00:00.000Z",
+          "action": "开启复核并启用标尺 RB-204",
+          "note": "9 月月度增长复核"
+        }
+      ]
+    },
+    {
+      "id": "rv-2",
+      "pointId": "pt-2",
+      "rodId": "rd-3",
+      "purpose": "9 月月度增长复核",
+      "status": "进行中",
+      "openedAt": "2026-09-02T02:00:00.000Z",
+      "openedBy": "江屿",
+      "closedAt": null,
+      "closedBy": "",
+      "closeNote": "",
+      "createdAt": "2026-09-02T02:00:00.000Z",
+      "updatedAt": "2026-09-08T06:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-08T06:00:00.000Z",
+          "action": "照片进待重拍",
+          "note": "换算偏差 2.146% 超过 1%"
+        },
+        {
+          "at": "2026-09-02T02:00:00.000Z",
+          "action": "开启复核并启用标尺 RB-209",
+          "note": "9 月月度增长复核"
+        }
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "id": "st-1",
+      "pointId": "pt-1",
+      "reviewId": "rv-1",
+      "rodId": "rd-1",
+      "date": "2026-05-15",
+      "photographer": "沈宁",
+      "photoUrl": "https://cave-photos.example.org/d07/2026-05.jpg",
+      "scaleMm": 100,
+      "scalePixels": 2000,
+      "mmPerPx": 0.05,
+      "sectionPixels": 1000,
+      "status": "已采用",
+      "deviationPct": null,
+      "reshootOfId": null,
+      "note": "基准照片",
+      "createdAt": "2026-05-15T08:00:00.000Z",
+      "updatedAt": "2026-05-15T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-05-15T08:00:00.000Z",
+          "action": "登记采用照片（基准）",
+          "note": "断面位置 50.000mm"
+        }
+      ]
+    },
+    {
+      "id": "st-2",
+      "pointId": "pt-1",
+      "reviewId": "rv-1",
+      "rodId": "rd-1",
+      "date": "2026-06-18",
+      "photographer": "沈宁",
+      "photoUrl": "https://cave-photos.example.org/d07/2026-06.jpg",
+      "scaleMm": 100,
+      "scalePixels": 2000,
+      "mmPerPx": 0.05,
+      "sectionPixels": 1005,
+      "status": "已采用",
+      "deviationPct": 0,
+      "reshootOfId": null,
+      "note": "",
+      "createdAt": "2026-06-18T08:00:00.000Z",
+      "updatedAt": "2026-06-18T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-18T08:00:00.000Z",
+          "action": "登记采用照片",
+          "note": "断面位置 50.250mm"
+        }
+      ]
+    },
+    {
+      "id": "st-3",
+      "pointId": "pt-1",
+      "reviewId": "rv-1",
+      "rodId": "rd-1",
+      "date": "2026-07-16",
+      "photographer": "江屿",
+      "photoUrl": "https://cave-photos.example.org/d07/2026-07.jpg",
+      "scaleMm": 100,
+      "scalePixels": 2000,
+      "mmPerPx": 0.05,
+      "sectionPixels": 1011,
+      "status": "已采用",
+      "deviationPct": 0,
+      "reshootOfId": null,
+      "note": "",
+      "createdAt": "2026-07-16T08:00:00.000Z",
+      "updatedAt": "2026-07-20T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-07-20T03:00:00.000Z",
+          "action": "增长已确认",
+          "note": "确认人 黎澈"
+        },
+        {
+          "at": "2026-07-16T08:00:00.000Z",
+          "action": "登记采用照片",
+          "note": "断面位置 50.550mm"
+        }
+      ]
+    },
+    {
+      "id": "st-4",
+      "pointId": "pt-2",
+      "reviewId": "rv-4",
+      "rodId": "rd-3",
+      "date": "2026-06-10",
+      "photographer": "江屿",
+      "photoUrl": "https://cave-photos.example.org/y03/2026-06.jpg",
+      "scaleMm": 100,
+      "scalePixels": 2000,
+      "mmPerPx": 0.05,
+      "sectionPixels": 1200,
+      "status": "已采用",
+      "deviationPct": null,
+      "reshootOfId": null,
+      "note": "基准照片（50mm 标尺占 1000px，按 0.05mm/px 计）",
+      "createdAt": "2026-06-10T08:00:00.000Z",
+      "updatedAt": "2026-06-10T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-10T08:00:00.000Z",
+          "action": "登记采用照片（基准）",
+          "note": "断面位置 60.000mm"
+        }
+      ]
+    },
+    {
+      "id": "st-5",
+      "pointId": "pt-2",
+      "reviewId": "rv-4",
+      "rodId": "rd-3",
+      "date": "2026-07-08",
+      "photographer": "江屿",
+      "photoUrl": "https://cave-photos.example.org/y03/2026-07.jpg",
+      "scaleMm": 100,
+      "scalePixels": 2000,
+      "mmPerPx": 0.05,
+      "sectionPixels": 1190,
+      "status": "已采用",
+      "deviationPct": 0,
+      "reshootOfId": null,
+      "note": "",
+      "createdAt": "2026-07-08T08:00:00.000Z",
+      "updatedAt": "2026-07-08T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-07-08T08:00:00.000Z",
+          "action": "登记采用照片",
+          "note": "断面位置 59.500mm"
+        }
+      ]
+    },
+    {
+      "id": "st-6",
+      "pointId": "pt-2",
+      "reviewId": "rv-4",
+      "rodId": "rd-3",
+      "date": "2026-08-05",
+      "photographer": "江屿",
+      "photoUrl": "https://cave-photos.example.org/y03/2026-08.jpg",
+      "scaleMm": 100,
+      "scalePixels": 2000,
+      "mmPerPx": 0.05,
+      "sectionPixels": 1183,
+      "status": "已采用",
+      "deviationPct": 0,
+      "reshootOfId": null,
+      "note": "",
+      "createdAt": "2026-08-05T08:00:00.000Z",
+      "updatedAt": "2026-08-06T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-08-06T03:00:00.000Z",
+          "action": "增长已确认",
+          "note": "确认人 沈宁"
+        },
+        {
+          "at": "2026-08-05T08:00:00.000Z",
+          "action": "登记采用照片",
+          "note": "断面位置 59.150mm"
+        }
+      ]
+    },
+    {
+      "id": "st-7",
+      "pointId": "pt-1",
+      "reviewId": "rv-3",
+      "rodId": "rd-2",
+      "date": "2026-09-10",
+      "photographer": "沈宁",
+      "photoUrl": "https://cave-photos.example.org/d07/2026-09.jpg",
+      "scaleMm": 100,
+      "scalePixels": 2000,
+      "mmPerPx": 0.05,
+      "sectionPixels": 1017,
+      "status": "已采用",
+      "deviationPct": 0,
+      "reshootOfId": null,
+      "note": "",
+      "createdAt": "2026-09-10T06:00:00.000Z",
+      "updatedAt": "2026-09-10T06:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-10T06:00:00.000Z",
+          "action": "登记采用照片",
+          "note": "断面位置 50.850mm，增长待确认"
+        }
+      ]
+    },
+    {
+      "id": "st-8",
+      "pointId": "pt-2",
+      "reviewId": "rv-2",
+      "rodId": "rd-3",
+      "date": "2026-09-08",
+      "photographer": "江屿",
+      "photoUrl": "https://cave-photos.example.org/y03/2026-09.jpg",
+      "scaleMm": 100,
+      "scalePixels": 1958,
+      "mmPerPx": 0.051073,
+      "sectionPixels": 1210,
+      "status": "待重拍",
+      "deviationPct": 2.146,
+      "reshootOfId": null,
+      "note": "机位偏近导致标尺像素换算超差",
+      "createdAt": "2026-09-08T06:00:00.000Z",
+      "updatedAt": "2026-09-08T06:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-08T06:00:00.000Z",
+          "action": "照片进待重拍",
+          "note": "换算偏差 2.146% 超过 1%"
+        }
+      ]
+    }
+  ],
+  "growths": [
+    {
+      "id": "gr-1",
+      "pointId": "pt-1",
+      "fromShotId": "st-1",
+      "toShotId": "st-2",
+      "fromDate": "2026-05-15",
+      "toDate": "2026-06-18",
+      "delta": 0.25,
+      "direction": "正向增长",
+      "status": "已确认",
+      "confirmer": "黎澈",
+      "confirmedAt": "2026-07-20T03:00:00.000Z",
+      "createdAt": "2026-06-18T08:00:00.000Z",
+      "updatedAt": "2026-07-20T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-07-20T03:00:00.000Z",
+          "action": "增长已确认",
+          "note": "确认人 黎澈，与下次增长同向、差值 0.05mm"
+        }
+      ]
+    },
+    {
+      "id": "gr-2",
+      "pointId": "pt-1",
+      "fromShotId": "st-2",
+      "toShotId": "st-3",
+      "fromDate": "2026-06-18",
+      "toDate": "2026-07-16",
+      "delta": 0.3,
+      "direction": "正向增长",
+      "status": "已确认",
+      "confirmer": "黎澈",
+      "confirmedAt": "2026-09-23T21:36:05.382Z",
+      "createdAt": "2026-07-16T08:00:00.000Z",
+      "updatedAt": "2026-09-23T21:36:05.382Z",
+      "history": [
+        {
+          "at": "2026-09-23T21:36:05.382Z",
+          "action": "增长已确认",
+          "note": "确认人 黎澈，连续两次同向、差值 0mm"
+        },
+        {
+          "at": "2026-07-20T03:00:00.000Z",
+          "action": "增长已确认",
+          "note": "确认人 黎澈，连续两次同向、差值 0.05mm"
+        }
+      ]
+    },
+    {
+      "id": "gr-3",
+      "pointId": "pt-1",
+      "fromShotId": "st-3",
+      "toShotId": "st-7",
+      "fromDate": "2026-07-16",
+      "toDate": "2026-09-10",
+      "delta": 0.3,
+      "direction": "正向增长",
+      "status": "已确认",
+      "confirmer": "黎澈",
+      "confirmedAt": "2026-09-23T21:36:05.382Z",
+      "createdAt": "2026-09-10T06:00:00.000Z",
+      "updatedAt": "2026-09-23T21:36:05.382Z",
+      "history": [
+        {
+          "at": "2026-09-23T21:36:05.382Z",
+          "action": "增长已确认",
+          "note": "确认人 黎澈，连续两次同向、差值 0mm"
+        },
+        {
+          "at": "2026-09-10T06:00:00.000Z",
+          "action": "增长生成，待另一位测量员确认",
+          "note": "候选配对：与上一次增长差值 0.00mm"
+        }
+      ]
+    },
+    {
+      "id": "gr-4",
+      "pointId": "pt-2",
+      "fromShotId": "st-4",
+      "toShotId": "st-5",
+      "fromDate": "2026-06-10",
+      "toDate": "2026-07-08",
+      "delta": -0.5,
+      "direction": "负向（回缩）",
+      "status": "已确认",
+      "confirmer": "沈宁",
+      "confirmedAt": "2026-08-06T03:00:00.000Z",
+      "createdAt": "2026-07-08T08:00:00.000Z",
+      "updatedAt": "2026-08-06T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-08-06T03:00:00.000Z",
+          "action": "增长已确认",
+          "note": "确认人 沈宁，与下次增长同向、差值 0.15mm"
+        }
+      ]
+    },
+    {
+      "id": "gr-5",
+      "pointId": "pt-2",
+      "fromShotId": "st-5",
+      "toShotId": "st-6",
+      "fromDate": "2026-07-08",
+      "toDate": "2026-08-05",
+      "delta": -0.35,
+      "direction": "负向（回缩）",
+      "status": "已确认",
+      "confirmer": "沈宁",
+      "confirmedAt": "2026-08-06T03:00:00.000Z",
+      "createdAt": "2026-08-05T08:00:00.000Z",
+      "updatedAt": "2026-08-06T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-08-06T03:00:00.000Z",
+          "action": "增长已确认",
+          "note": "确认人 沈宁，连续两次同向、差值 0.15mm"
+        }
       ]
     }
   ]

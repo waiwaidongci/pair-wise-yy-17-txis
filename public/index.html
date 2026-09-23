@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>业务系统</title>
+  <title>钟乳石断面摄影测量复核台</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header>
       <div class="topline">
         <div>
-          <h1 id="title">业务系统</h1>
+          <h1 id="title">钟乳石断面摄影测量复核台</h1>
           <p class="lede" id="lede"></p>
         </div>
         <button class="secondary" id="refreshBtn">刷新数据</button>
@@ -20,7 +20,17 @@
     </header>
     <main id="main"></main>
   </div>
+  <div class="modal-mask" id="modalMask" hidden>
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h2 id="modalTitle"></h2>
+        <button class="ghost" id="modalClose" type="button">关闭</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
   <div class="toast" id="toast"></div>
+  <script src="/domain/rules.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>
