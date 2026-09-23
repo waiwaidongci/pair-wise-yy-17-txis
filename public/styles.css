@@ -309,6 +309,116 @@ main {
   border-radius: 8px;
 }
 
+/* —— 复核台专用组件 —— */
+.rules-panel {
+  margin-bottom: 18px;
+  background: linear-gradient(180deg, var(--panel), #fbf8f1);
+}
+
+.rules-panel ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 2;
+}
+
+.photo-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.photo-link:hover {
+  text-decoration: underline;
+}
+
+.callout {
+  margin-top: 10px;
+  border-radius: 6px;
+  padding: 9px 11px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.callout.bad {
+  background: rgba(161, 61, 61, .09);
+  color: var(--bad);
+  border: 1px solid rgba(161, 61, 61, .25);
+}
+
+.preview {
+  margin-top: 12px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.preview.bad {
+  border-color: rgba(161, 61, 61, .35);
+  background: rgba(161, 61, 61, .05);
+}
+
+.preview.ok {
+  border-color: rgba(38, 115, 77, .35);
+  background: rgba(38, 115, 77, .05);
+}
+
+.preview-head {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.review-card .detail strong .pill {
+  font-size: 11px;
+}
+
+.modal-mask[hidden] {
+  display: none;
+}
+
+.modal-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(32, 32, 29, .46);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6vh 16px 24px;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.modal {
+  position: relative;
+  width: min(640px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.modal h2 {
+  margin: 0;
+}
+
+.modal label {
+  margin-top: 4px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 22px;
+  padding: 2px 8px;
+}
+
 .toast {
   position: fixed;
   right: 20px;

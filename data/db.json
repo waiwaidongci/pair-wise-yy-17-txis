@@ -2,41 +2,399 @@
   "sites": [
     {
       "id": "site-seed-1",
+      "pointCode": "D-07",
       "cave": "北麓三号洞",
       "zone": "滴水帘区",
-      "pointCode": "D-07",
-      "route": "西线巡测",
-      "sensitivity": "高",
-      "protectedStatus": "重点保护",
-      "baselineTemp": 16.2,
-      "baselineHumidity": 92,
-      "baselineCo2": 680,
-      "note": "游客步道上方，滴水频率稳定",
-      "createdAt": "2026-06-14T08:00:00.000Z",
-      "updatedAt": "2026-06-14T08:00:00.000Z",
+      "baselineMm": 47.5,
+      "note": "游客步道上方，滴水稳定，每月固定机位拍摄",
+      "createdAt": "2026-03-10T08:00:00.000Z",
+      "updatedAt": "2026-03-10T08:00:00.000Z",
       "history": [
-        { "at": "2026-06-14T08:00:00.000Z", "action": "创建", "note": "样点建档" }
+        {
+          "at": "2026-03-10T08:00:00.000Z",
+          "action": "创建",
+          "note": "样点建档"
+        }
+      ]
+    },
+    {
+      "id": "site-seed-2",
+      "pointCode": "D-12",
+      "cave": "北麓三号洞",
+      "zone": "石笋林区",
+      "baselineMm": 52,
+      "note": "断面清晰，2026-05 历史照片曾读数更正",
+      "createdAt": "2026-03-10T08:00:00.000Z",
+      "updatedAt": "2026-05-20T09:30:00.000Z",
+      "history": [
+        {
+          "at": "2026-03-10T08:00:00.000Z",
+          "action": "创建",
+          "note": "样点建档"
+        },
+        {
+          "at": "2026-05-20T09:30:00.000Z",
+          "action": "备注",
+          "note": "历史拍摄更正演练样点"
+        }
+      ]
+    },
+    {
+      "id": "site-seed-3",
+      "pointCode": "D-21",
+      "cave": "南支风洞",
+      "zone": "洞口过渡带",
+      "baselineMm": 60,
+      "note": "首次月度复核中，标尺读数偏差待重拍",
+      "createdAt": "2026-06-01T08:00:00.000Z",
+      "updatedAt": "2026-06-01T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-01T08:00:00.000Z",
+          "action": "创建",
+          "note": "样点建档"
+        }
       ]
     }
   ],
-  "surveys": [
+  "rulers": [
     {
-      "id": "survey-seed-1",
-      "siteId": "site-seed-1",
-      "surveyor": "沈宁",
-      "date": "2026-06-18",
-      "temperature": 17.4,
-      "humidity": 88,
-      "co2": 920,
-      "dripRate": 12,
-      "disturbance": "栏杆外侧有触碰痕迹",
-      "photoUrl": "",
-      "status": "异常待复查",
-      "reviewNote": "",
-      "createdAt": "2026-06-18T10:00:00.000Z",
-      "updatedAt": "2026-06-18T10:00:00.000Z",
+      "id": "ruler-seed-1",
+      "rulerCode": "R-101",
+      "caliberMm": 5,
+      "caliberPx": 100,
+      "note": "5 mm 短标尺，D-07 固定使用",
+      "createdAt": "2026-03-10T08:00:00.000Z",
+      "updatedAt": "2026-03-10T08:00:00.000Z",
       "history": [
-        { "at": "2026-06-18T10:00:00.000Z", "action": "创建", "note": "CO2升高并有干扰痕迹" }
+        {
+          "at": "2026-03-10T08:00:00.000Z",
+          "action": "创建",
+          "note": "标尺登记"
+        }
+      ]
+    },
+    {
+      "id": "ruler-seed-2",
+      "rulerCode": "R-102",
+      "caliberMm": 10,
+      "caliberPx": 200,
+      "note": "10 mm 标尺，D-12 固定使用",
+      "createdAt": "2026-03-10T08:00:00.000Z",
+      "updatedAt": "2026-03-10T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-03-10T08:00:00.000Z",
+          "action": "创建",
+          "note": "标尺登记"
+        }
+      ]
+    },
+    {
+      "id": "ruler-seed-3",
+      "rulerCode": "R-103",
+      "caliberMm": 10,
+      "caliberPx": 200,
+      "note": "备用标尺，D-21 首次复核占用中（链条未结）",
+      "createdAt": "2026-06-01T08:00:00.000Z",
+      "updatedAt": "2026-06-01T08:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-01T08:00:00.000Z",
+          "action": "创建",
+          "note": "标尺登记"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-seed-104",
+      "siteId": "site-seed-1",
+      "rulerId": "ruler-seed-1",
+      "date": "2026-04-15",
+      "surveyor": "沈宁",
+      "photoUrl": "https://example.com/photos/d07/2026-04.jpg",
+      "caliberMm": 5,
+      "caliberPx": 100,
+      "lengthPx": 958,
+      "lengthMm": 47.9,
+      "scaleDeviationPct": 0,
+      "growthMm": 0.4,
+      "anchorSource": "baseline",
+      "anchorReviewId": null,
+      "anchorDate": null,
+      "anchorLengthMm": 47.5,
+      "status": "已通过",
+      "checker": "柏舟",
+      "confirmedAt": "2026-04-17T03:00:00.000Z",
+      "memo": "首次月度复核，锚点为基准长度",
+      "invalidReason": "",
+      "reshootReason": "",
+      "createdAt": "2026-04-15T03:00:00.000Z",
+      "updatedAt": "2026-04-17T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-04-17T03:00:00.000Z",
+          "action": "复核通过",
+          "note": "柏舟 确认；增长 0.4 mm；该样点首次通过，锚点为基准长度"
+        },
+        {
+          "at": "2026-04-15T03:00:00.000Z",
+          "action": "登记复核",
+          "note": "照片与换算合格，待另一位测量员确认"
+        }
+      ]
+    },
+    {
+      "id": "review-seed-105",
+      "siteId": "site-seed-1",
+      "rulerId": "ruler-seed-1",
+      "date": "2026-05-15",
+      "surveyor": "沈宁",
+      "photoUrl": "https://example.com/photos/d07/2026-05.jpg",
+      "caliberMm": 5,
+      "caliberPx": 101,
+      "lengthPx": 976,
+      "lengthMm": 48.317,
+      "scaleDeviationPct": -0.0099,
+      "growthMm": 0.417,
+      "anchorSource": "review",
+      "anchorReviewId": "review-seed-104",
+      "anchorDate": "2026-04-15",
+      "anchorLengthMm": 47.9,
+      "status": "已通过",
+      "checker": "柏舟",
+      "confirmedAt": "2026-05-18T03:00:00.000Z",
+      "memo": "换算偏差 -0.99%，容差内；连续同向，差值 0.017 mm",
+      "invalidReason": "",
+      "reshootReason": "",
+      "createdAt": "2026-05-15T03:00:00.000Z",
+      "updatedAt": "2026-05-18T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-05-18T03:00:00.000Z",
+          "action": "复核通过",
+          "note": "柏舟 确认；增长 0.417 mm；较上次增长差值 0.017 mm（限 0.2 mm）"
+        },
+        {
+          "at": "2026-05-15T03:00:00.000Z",
+          "action": "登记复核",
+          "note": "照片与换算合格，待另一位测量员确认"
+        }
+      ]
+    },
+    {
+      "id": "review-seed-106",
+      "siteId": "site-seed-1",
+      "rulerId": "ruler-seed-1",
+      "date": "2026-06-15",
+      "surveyor": "沈宁",
+      "photoUrl": "https://example.com/photos/d07/2026-06.jpg",
+      "caliberMm": 5,
+      "caliberPx": 100,
+      "lengthPx": 973,
+      "lengthMm": 48.65,
+      "scaleDeviationPct": 0,
+      "growthMm": 0.333,
+      "anchorSource": "review",
+      "anchorReviewId": "review-seed-105",
+      "anchorDate": "2026-05-15",
+      "anchorLengthMm": 48.317,
+      "status": "待确认",
+      "checker": "",
+      "confirmedAt": null,
+      "memo": "与上月同向增长，差值 0.084 mm，待另一位测量员确认",
+      "invalidReason": "",
+      "reshootReason": "",
+      "createdAt": "2026-06-15T03:00:00.000Z",
+      "updatedAt": "2026-06-15T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-15T03:00:00.000Z",
+          "action": "登记复核",
+          "note": "照片与换算合格，待另一位测量员确认"
+        }
+      ]
+    },
+    {
+      "id": "review-seed-204",
+      "siteId": "site-seed-2",
+      "rulerId": "ruler-seed-2",
+      "date": "2026-04-15",
+      "surveyor": "闻笛",
+      "photoUrl": "https://example.com/photos/d12/2026-04.jpg",
+      "caliberMm": 10,
+      "caliberPx": 200,
+      "lengthPx": 1042,
+      "lengthMm": 52.1,
+      "scaleDeviationPct": 0,
+      "growthMm": 0.1,
+      "anchorSource": "baseline",
+      "anchorReviewId": null,
+      "anchorDate": null,
+      "anchorLengthMm": 52,
+      "status": "已通过",
+      "checker": "柏舟",
+      "confirmedAt": "2026-04-18T03:00:00.000Z",
+      "memo": "较基准增长 0.1 mm，作为后续锚点",
+      "invalidReason": "",
+      "reshootReason": "",
+      "createdAt": "2026-04-15T03:30:00.000Z",
+      "updatedAt": "2026-04-18T03:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-04-18T03:00:00.000Z",
+          "action": "复核通过",
+          "note": "柏舟 确认；增长 0 mm；该样点首次通过，锚点为基准长度"
+        },
+        {
+          "at": "2026-04-15T03:30:00.000Z",
+          "action": "登记复核",
+          "note": "照片与换算合格，待另一位测量员确认"
+        }
+      ]
+    },
+    {
+      "id": "review-seed-205",
+      "siteId": "site-seed-2",
+      "rulerId": "ruler-seed-2",
+      "date": "2026-05-15",
+      "surveyor": "闻笛",
+      "photoUrl": "https://example.com/photos/d12/2026-05.jpg",
+      "caliberMm": 10,
+      "caliberPx": 200,
+      "lengthPx": 1046,
+      "lengthMm": 52.3,
+      "scaleDeviationPct": 0,
+      "growthMm": 0.2,
+      "anchorSource": "review",
+      "anchorReviewId": "review-seed-204",
+      "anchorDate": "2026-04-15",
+      "anchorLengthMm": 52.1,
+      "status": "已失效",
+      "checker": "柏舟",
+      "confirmedAt": "2026-05-18T03:00:00.000Z",
+      "memo": "原始通过后因照片读数更正作废",
+      "invalidReason": "历史拍摄已更正，原通过结论作废，需重新确认",
+      "reshootReason": "",
+      "createdAt": "2026-05-15T03:30:00.000Z",
+      "updatedAt": "2026-05-22T07:10:00.000Z",
+      "history": [
+        {
+          "at": "2026-05-22T07:10:00.000Z",
+          "action": "更正历史拍摄",
+          "note": "断面像素按原图复核为 1049；无后续复核"
+        },
+        {
+          "at": "2026-05-18T03:00:00.000Z",
+          "action": "复核通过",
+          "note": "柏舟 确认；增长 0.2 mm"
+        },
+        {
+          "at": "2026-05-15T03:30:00.000Z",
+          "action": "登记复核",
+          "note": "照片与换算合格，待另一位测量员确认"
+        }
+      ]
+    },
+    {
+      "id": "review-seed-205b",
+      "siteId": "site-seed-2",
+      "rulerId": "ruler-seed-2",
+      "date": "2026-05-15",
+      "surveyor": "闻笛",
+      "photoUrl": "https://example.com/photos/d12/2026-05-retake.jpg",
+      "caliberMm": 10,
+      "caliberPx": 200,
+      "lengthPx": 1045,
+      "lengthMm": 52.25,
+      "scaleDeviationPct": 0,
+      "growthMm": 0.15,
+      "anchorSource": "review",
+      "anchorReviewId": "review-seed-204",
+      "anchorDate": "2026-04-15",
+      "anchorLengthMm": 52.1,
+      "status": "待确认",
+      "checker": "",
+      "confirmedAt": null,
+      "memo": "更正后重拍：与 4 月同向增长，差值 0.05 mm，待另一位测量员确认",
+      "invalidReason": "",
+      "reshootReason": "",
+      "createdAt": "2026-05-23T02:00:00.000Z",
+      "updatedAt": "2026-05-23T02:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-05-23T02:00:00.000Z",
+          "action": "登记重拍",
+          "note": "重拍合格，重新进入待确认"
+        }
+      ]
+    },
+    {
+      "id": "review-seed-206",
+      "siteId": "site-seed-2",
+      "rulerId": "ruler-seed-2",
+      "date": "2026-06-15",
+      "surveyor": "闻笛",
+      "photoUrl": "",
+      "caliberMm": 10,
+      "caliberPx": 200,
+      "lengthPx": 1048,
+      "lengthMm": 52.4,
+      "scaleDeviationPct": 0,
+      "growthMm": null,
+      "anchorSource": "review",
+      "anchorReviewId": "review-seed-204",
+      "anchorDate": "2026-04-15",
+      "anchorLengthMm": 52.1,
+      "status": "待重拍",
+      "checker": "",
+      "confirmedAt": null,
+      "memo": "存储卡写入失败，照片缺失",
+      "invalidReason": "",
+      "reshootReason": "照片缺失",
+      "createdAt": "2026-06-15T03:30:00.000Z",
+      "updatedAt": "2026-06-15T03:30:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-15T03:30:00.000Z",
+          "action": "登记复核",
+          "note": "进待重拍：照片缺失"
+        }
+      ]
+    },
+    {
+      "id": "review-seed-306",
+      "siteId": "site-seed-3",
+      "rulerId": "ruler-seed-3",
+      "date": "2026-06-15",
+      "surveyor": "沈宁",
+      "photoUrl": "https://example.com/photos/d21/2026-06.jpg",
+      "caliberMm": 10,
+      "caliberPx": 196,
+      "lengthPx": 1180,
+      "lengthMm": 60.204,
+      "scaleDeviationPct": 0.020408,
+      "growthMm": null,
+      "anchorSource": "baseline",
+      "anchorReviewId": null,
+      "anchorDate": null,
+      "anchorLengthMm": 60,
+      "status": "待重拍",
+      "checker": "",
+      "confirmedAt": null,
+      "memo": "现场标尺摆放角度异常，换算偏差 +2.04%，超 1%",
+      "invalidReason": "",
+      "reshootReason": "换算偏差超过 1%",
+      "createdAt": "2026-06-15T04:00:00.000Z",
+      "updatedAt": "2026-06-15T04:00:00.000Z",
+      "history": [
+        {
+          "at": "2026-06-15T04:00:00.000Z",
+          "action": "登记复核",
+          "note": "进待重拍：换算偏差超过 1%"
+        }
       ]
     }
   ]
